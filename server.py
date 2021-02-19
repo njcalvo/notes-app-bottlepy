@@ -1,8 +1,7 @@
-# Run with "python server.py"
-from bottle import * #run, error, get, post, put, delete, route, response, request, hook
+from bottle import app, run, error, get, post, put, delete, route, response, request, hook
 from marshmallow import ValidationError
 from bottle_cors_plugin import cors_plugin
-from models import db, Note, create_tables, User
+from models import db, Note, User, create_tables
 from serializers import NoteSchema, LoginSchema, UserSchema
 import bcrypt
 import json
@@ -13,9 +12,11 @@ import datetime as dt
 JWT_SECRET = '8hd87b9bHBDU7NDS9DNi3nf903m'
 JWT_EXP_TIME = 3600
 
+create_tables()
+
 @get('/')
 def index():
-    return 'Aimo Backend Technical Test'
+    return { 'message': 'Aimo Backend Technical Test' }
 
 def response_data(code, message):
     res = {
@@ -217,5 +218,4 @@ def delete_note(user_id, id):
 if __name__ == '__main__':
     app = app()
     app.install(cors_plugin('*'))
-    run(host='localhost', port=8000, debug=True, reloader=True)
-    create_tables()
+    run(host='localhost', port=8000)
