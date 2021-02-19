@@ -35,7 +35,8 @@ function bodyLoad(){
             createCards(json)
         })
         .catch(error => {
-            fastAlert(JSON.parse(error.message))
+            localStorage.removeItem('token')
+            createAlert(JSON.parse(error.message))
         })
     }
     else
