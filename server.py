@@ -9,6 +9,7 @@ import json
 import peewee
 import jwt
 import datetime as dt
+import os
 
 JWT_SECRET = '8hd87b9bHBDU7NDS9DNi3nf903m'
 JWT_EXP_TIME = 3600
