@@ -7,7 +7,7 @@ let cardsContainer = document.querySelector("#cardsContainer");
 let noteFormContainer = document.querySelector("#noteFormContainer");
 let panel = document.querySelector("#panel");
 
-const baseURL = "http://localhost:8000/";
+const baseURL = "https://aimo-notes-api.herokuapp.com/";
 
 const fetchJSON = (...args) => {
     return fetch(...args)

@@ -9,4 +9,4 @@ def index():
 def scripts():
     return static_file('scripts.js', root=".")
 
-run(host='localhost', port=5000)
+run(host="0.0.0.0", port=int(os.environ.get("PORT", 8000)))
