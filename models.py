@@ -12,11 +12,18 @@ class User(BaseEntity):
     password = CharField()
     created_at = DateTimeField(default = dt.datetime.now)
 
+    class Meta:
+        table_name = 'users'
+
 class Note(BaseEntity):
     title = CharField()
     content = TextField(null=True)
     user = ForeignKeyField(User, backref='notes')
     created_at = DateTimeField(default = dt.datetime.now)
 
+    class Meta:
+        table_name = 'notes'
+
 def create_tables():
-    db.create_tables([Note, User])
+    with db:
+        db.create_tables([Note, User])
