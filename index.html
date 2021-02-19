@@ -7,7 +7,7 @@
     <title>Notes App</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 <body onload="bodyLoad()">
-    <form class="col-8 col-sm-4 col-xl-2 position-absolute top-50 start-50 translate-middle" id="loginForm">
+    <form class="col-8 col-sm-4 col-xl-2 position-absolute top-50 start-50 translate-middle" id="loginForm" style="visibility: hidden">
         <h1 class="text-center my-3">Notes App</h1>
         <h3 class="text-center my-3">Login</h3>
         <div class="d-grid gap-2 mb-3">
@@ -19,7 +19,7 @@
             <button type="button" class="btn btn-dark" onclick="goRegister()">Register</button>
         </div>
     </form>
-    <form class="col-8 col-sm-4 col-xl-2 position-absolute top-50 start-50 translate-middle" id="registerForm">
+    <form class="col-8 col-sm-4 col-xl-2 position-absolute top-50 start-50 translate-middle" id="registerForm" style="visibility: hidden">
       <h1 class="text-center my-3">Notes App</h1>
       <h3 class="text-center my-3">Register</h3>
         <div class="d-grid gap-2 mb-3">
@@ -31,7 +31,7 @@
             <button type="button" class="btn btn-dark" onclick="goLogin()">Login</button>
         </div>
     </form>
-    <div class="container-fluid" id="panel">
+    <div class="container-fluid" id="panel" style="visibility: hidden">
         <nav class="navbar navbar-expand-sm navbar-light bg-light">
             <a class="navbar-brand" href="#">Notes App</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#defaultNavbar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
