@@ -1,4 +1,4 @@
-from bottle import app, run, error, get, post, put, delete, route, response, request, hook
+from bottle import app, run, error, get, post, put, delete, route, response, request, hook, HTTPError
 from marshmallow import ValidationError
 from bottle_cors_plugin import cors_plugin
 from models import db, Note, User, create_tables
