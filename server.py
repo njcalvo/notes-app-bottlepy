@@ -218,5 +218,5 @@ def delete_note(user_id, id):
 
 if __name__ == '__main__':
     app = app()
-    app.install(cors_plugin('https://aimo-notes-app.herokuapp.com/'))
+    app.install(cors_plugin('https://aimo-notes-app.herokuapp.com'))
     run(host="0.0.0.0", port=int(os.environ.get("PORT", 8000)))
