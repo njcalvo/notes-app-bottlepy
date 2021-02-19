@@ -16,7 +16,7 @@ JWT_EXP_TIME = 3600
 
 @get('/')
 def index():
-    return 'Aimo Backend Technical Test'
+    return { 'message': 'Aimo Backend Technical Test' }
 
 def response_data(code, message):
     res = {
