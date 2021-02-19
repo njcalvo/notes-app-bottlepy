@@ -216,7 +216,16 @@ function saveOneNote(){
         }),
     })
     .then((json) => {
-        createAlert(json)
+        if(json.statusCode == 201) {
+            createAlert(json)
+            location.reload()
+        }
+        else
+        {
+            if(json.title) {
+                fastAlert({ 'message': 'Title: ' + json.title })
+            }
+        }
     })
     .catch(error => {
         fastAlert(JSON.parse(error.message))
