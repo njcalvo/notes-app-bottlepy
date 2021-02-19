@@ -216,7 +216,7 @@ function saveOneNote(){
         }),
     })
     .then((json) => {
-        if(json.statusCode == 201) {
+        if(json.statusCode == 200) {
             createAlert(json)
             location.reload()
         }
