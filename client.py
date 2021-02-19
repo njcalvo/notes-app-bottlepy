@@ -1,5 +1,6 @@
 # Run with "python client.py"
 from bottle import get, run, static_file
+import os
 
 @get('/')
 def index():
