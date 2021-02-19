@@ -217,5 +217,5 @@ def delete_note(user_id, id):
 if __name__ == '__main__':
     app = app()
     app.install(cors_plugin('*'))
-    run(host='localhost', port=8000, debug=True, reloader=True)
+    run(host="0.0.0.0", port=int(os.environ.get("PORT", 8000)))
     create_tables()
