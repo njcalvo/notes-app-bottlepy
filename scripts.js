@@ -22,6 +22,7 @@ const fetchJSON = (...args) => {
 
 function bodyLoad(){
     if(localStorage.token){
+        panel.style.visibility = 'visible'
         loginForm.remove()
         registerForm.remove()
 
@@ -39,6 +40,7 @@ function bodyLoad(){
     }
     else
     {
+        loginForm.style.visibility = 'visible'
         registerForm.style.visibility = 'hidden';
         panel.remove()
     }
@@ -216,7 +218,7 @@ function saveOneNote(){
         }),
     })
     .then((json) => {
-        if(json.statusCode == 201) {
+        if(json.statusCode == 200) {
             createAlert(json)
             location.reload()
         }
